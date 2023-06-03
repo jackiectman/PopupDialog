@@ -39,7 +39,7 @@ final public class PopupDialogContainerView: UIView {
     }
 
     /// The corner radius of the popup view
-    @objc public dynamic var cornerRadius: Float {
+    @objc public dynamic var pd_cornerRadius: Float {
         get { return Float(shadowContainer.layer.cornerRadius) }
         set {
             let radius = CGFloat(newValue)
@@ -51,13 +51,13 @@ final public class PopupDialogContainerView: UIView {
     // MARK: Shadow related
 
     /// Enable / disable shadow rendering of the container
-    @objc public dynamic var shadowEnabled: Bool {
+    @objc public dynamic var pd_shadowEnabled: Bool {
         get { return shadowContainer.layer.shadowRadius > 0 }
-        set { shadowContainer.layer.shadowRadius = newValue ? shadowRadius : 0 }
+        set { shadowContainer.layer.shadowRadius = newValue ? pd_shadowRadius : 0 }
     }
 
     /// Color of the container shadow
-    @objc public dynamic var shadowColor: UIColor? {
+    @objc public dynamic var pd_shadowColor: UIColor? {
         get {
             guard let color = shadowContainer.layer.shadowColor else {
                 return nil
@@ -68,25 +68,25 @@ final public class PopupDialogContainerView: UIView {
     }
     
     /// Radius of the container shadow
-    @objc public dynamic var shadowRadius: CGFloat {
+    @objc public dynamic var pd_shadowRadius: CGFloat {
         get { return shadowContainer.layer.shadowRadius }
         set { shadowContainer.layer.shadowRadius = newValue }
     }
     
     /// Opacity of the the container shadow
-    @objc public dynamic var shadowOpacity: Float {
+    @objc public dynamic var pd_shadowOpacity: Float {
         get { return shadowContainer.layer.shadowOpacity }
         set { shadowContainer.layer.shadowOpacity = newValue }
     }
     
     /// Offset of the the container shadow
-    @objc public dynamic var shadowOffset: CGSize {
+    @objc public dynamic var pd_shadowOffset: CGSize {
         get { return shadowContainer.layer.shadowOffset }
         set { shadowContainer.layer.shadowOffset = newValue }
     }
     
     /// Path of the the container shadow
-    @objc public dynamic var shadowPath: CGPath? {
+    @objc public dynamic var pd_shadowPath: CGPath? {
         get { return shadowContainer.layer.shadowPath}
         set { shadowContainer.layer.shadowPath = newValue }
     }
